@@ -1,10 +1,10 @@
-package Ejercicio3;
+package Ejercicio3.modelo;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 
-class Report implements Reporte{
+public class Report implements Reporte{
     private String reporte;
 
     public Report(String reporte) {

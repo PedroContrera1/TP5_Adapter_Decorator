@@ -1,4 +1,4 @@
-package Exceptions;
+package Ejercicio5.Exceptions;
 
 public class NombreInvalidoException extends RuntimeException {
     public NombreInvalidoException(String message) {

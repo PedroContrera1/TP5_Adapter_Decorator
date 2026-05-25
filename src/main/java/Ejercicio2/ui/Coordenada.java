@@ -1,3 +1,3 @@
-package Ejercicio2;
+package Ejercicio2.ui;
 record Coordenada(int x, int y) {
 }

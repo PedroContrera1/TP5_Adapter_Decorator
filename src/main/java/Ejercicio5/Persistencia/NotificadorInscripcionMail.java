@@ -1,6 +1,6 @@
-package Persistencia;
+package Ejercicio5.Persistencia;
 
-import Entities.Participante;
+import Ejercicio5.Entities.Participante;
 import jakarta.mail.*;
 import jakarta.mail.internet.InternetAddress;
 import jakarta.mail.internet.MimeMessage;

@@ -1,9 +1,11 @@
-package Ejercicio3;
+package Ejercicio3.modelo;
+
+import Ejercicio3.decorator.ReporteDecorator;
 
 import java.io.File;
 
-public class ReporteConSobreescritura extends ReporteDecorator{
-    public ReporteConSobreescritura(Reporte reporte){
+public class ReporteConSobrescritura extends ReporteDecorator {
+    public ReporteConSobrescritura(Reporte reporte){
         super(reporte);
     }
 

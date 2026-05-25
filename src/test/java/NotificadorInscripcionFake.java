@@ -1,5 +1,5 @@
-import Entities.Participante;
-import Persistencia.NotificadorInscripcion;
+import Ejercicio5.Entities.Participante;
+import Ejercicio5.Persistencia.NotificadorInscripcion;
 
 import java.util.ArrayList;
 import java.util.List;

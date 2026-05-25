@@ -1,39 +1,53 @@
-package org.example;
+package Ejercicio5.main;
 
-import Entities.Concurso;
-import Entities.Inscripcion;
-import Entities.Participante;
-import Persistencia.*;
+import Ejercicio5.Entities.*;
+import Ejercicio5.Persistencia.*;
 
 import java.sql.Connection;
 import java.time.LocalDate;
 
-public class Main{
+public class Main {
     static void main() {
         Connection conexion = connectionBD.obtenerConexion();
 
         RegistroInscripcion registro = new RegistroInscripcionBD(conexion);
 
-        NotificadorInscripcion notificator = getNotificador();
+        NotificadorInscripcion notificador = new NotificadorInscripcionMail(
+                "smtp.mailtrap.io",
+                587,
+                "usuario",
+                "password",
+                "no-reply@concurso.com"
+        );
 
-        Concurso concurso = new Concurso(
-                "CON-1",
-                LocalDate.of(2026, 3, 24),
-                LocalDate.of(2026, 3, 30),
-                registro,
-                notificator
+        ConcursoInterface concursoBase = new Concurso(
+                "CONCURSO-01",
+                LocalDate.of(2026, 5, 1),
+                LocalDate.of(2026, 5, 30),
+                registro
+        );
+
+        ConcursoInterface concursoConEmail = new ConcursoConEmailDecorator(
+                concursoBase,
+                notificador
         );
 
         Participante participante = new Participante(
-                "P-1",
+                "1",
                 "Pedro",
-                "pedro@example.com"
+                "pedro@gmail.com"
         );
-        Inscripcion inscripcion = new Inscripcion(participante, LocalDate.of(2026, 3, 24));
-        concurso.inscribir(inscripcion);
+
+        Inscripcion inscripcion = new Inscripcion(
+                participante,
+                LocalDate.of(2026, 5, 1)
+        );
+
+        concursoConEmail.inscribir(inscripcion);
 
         System.out.println("Puntos del participante: " + participante.getPuntos());
     }
+
     public static NotificadorInscripcion getNotificador (){
         return new NotificadorInscripcionMail(
                 "sandbox.smtp.mailtrap.io",

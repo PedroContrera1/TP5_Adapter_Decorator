@@ -1,6 +1,6 @@
-package Ejercicio2;
+package Ejercicio2.ui;
 
-import java.awt.*;
+import Ejercicio2.modelo.Panel;
 
 interface Figura {
     void dibujar(Panel panel);

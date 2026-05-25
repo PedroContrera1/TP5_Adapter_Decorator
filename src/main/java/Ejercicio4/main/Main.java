@@ -1,6 +1,7 @@
-package Ejercicio4.modelo;
+package Ejercicio4.main;
 
 import Ejercicio4.builder.ComboBuilder;
+import Ejercicio4.modelo.Combo;
 
 public class Main {
     static void main(){

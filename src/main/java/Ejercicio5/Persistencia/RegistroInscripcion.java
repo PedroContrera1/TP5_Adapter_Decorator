@@ -1,6 +1,6 @@
-package Persistencia;
+package Ejercicio5.Persistencia;
 
-import Entities.Inscripcion;
+import Ejercicio5.Entities.Inscripcion;
 
 public interface RegistroInscripcion {
     void guardar(Inscripcion inscripcion, String idConcurso);

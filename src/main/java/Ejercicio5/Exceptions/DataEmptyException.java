@@ -1,4 +1,4 @@
-package Exceptions;
+package Ejercicio5.Exceptions;
 
 public class DataEmptyException extends RuntimeException {
     public DataEmptyException(String message) {

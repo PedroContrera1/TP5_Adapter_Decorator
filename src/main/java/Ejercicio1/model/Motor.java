@@ -1,4 +1,4 @@
-package Ejercicio1;
+package Ejercicio1.model;
 
 public interface Motor {
     void arrancar();

@@ -1,6 +1,4 @@
-package Ejercicio2;
-
-import java.awt.*;
+package Ejercicio2.modelo;
 
 public interface Panel{
     void dibujarCirculo(int x,int y, int ancho, int alto);

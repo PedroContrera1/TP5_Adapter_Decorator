@@ -1,6 +1,6 @@
-package Persistencia;
+package Ejercicio5.Persistencia;
 
-import Entities.Participante;
+import Ejercicio5.Entities.Participante;
 
 public interface NotificadorInscripcion {
 

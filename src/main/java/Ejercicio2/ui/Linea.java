@@ -1,6 +1,6 @@
-package Ejercicio2;
+package Ejercicio2.ui;
 
-import java.awt.*;
+import Ejercicio2.modelo.Panel;
 
 class Linea implements Figura {
     private final Coordenada coordenada;
@@ -13,6 +13,6 @@ class Linea implements Figura {
 
     @Override
     public void dibujar(Panel panel){
-        panel.dibujarLinea(coordenada.x(), coordenada.y(), coordenada.x() + longitud, coordenada.y());
+        panel.dibujarLinea(this.coordenada.x(),this.coordenada.y(), this.coordenada.x() + this.longitud, this.coordenada.y());
     }
 }

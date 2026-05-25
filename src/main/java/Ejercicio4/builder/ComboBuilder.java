@@ -1,4 +1,6 @@
-package Ejercicio4;
+package Ejercicio4.builder;
+
+import Ejercicio4.modelo.*;
 
 public class ComboBuilder {
 

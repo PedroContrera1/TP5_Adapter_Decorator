@@ -1,7 +1,7 @@
-package Persistencia;
+package Ejercicio5.Persistencia;
 
-import Entities.Inscripcion;
-import Exceptions.ParticipanteDuplicadoException;
+import Ejercicio5.Entities.Inscripcion;
+import Ejercicio5.Exceptions.ParticipanteDuplicadoException;
 
 import java.sql.Connection;
 import java.sql.Date;
@@ -19,7 +19,6 @@ public class RegistroInscripcionBD implements RegistroInscripcion {
         this.conexion = conexion;
     }
 
-    @Override
     public void guardar(Inscripcion inscripcion, String idConcurso) {
         String sql = "INSERT INTO registro_inscripciones (fecha, id_participante, id_concurso) VALUES (?, ?, ?)";
 

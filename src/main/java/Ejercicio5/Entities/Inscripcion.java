@@ -1,7 +1,7 @@
 package Ejercicio5.Entities;
 
-import Exceptions.FechaInvalidaException;
-import Exceptions.ParticipanteInvalidoException;
+import Ejercicio5.Exceptions.FechaInvalidaException;
+import Ejercicio5.Exceptions.ParticipanteInvalidoException;
 
 import java.time.LocalDate;
 import java.util.Objects;

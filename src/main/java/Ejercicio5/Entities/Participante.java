@@ -1,7 +1,7 @@
 package Ejercicio5.Entities;
 
-import Exceptions.NombreInvalidoException;
-import Exceptions.ParticipanteInvalidoException;
+import Ejercicio5.Exceptions.NombreInvalidoException;
+import Ejercicio5.Exceptions.ParticipanteInvalidoException;
 
 import java.util.Objects;
 

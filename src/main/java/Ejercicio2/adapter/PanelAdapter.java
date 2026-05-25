@@ -1,10 +1,11 @@
-package Ejercicio2;
+package Ejercicio2.adapter;
+
+import Ejercicio2.modelo.Panel;
 
 import java.awt.*;
-import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 
-public class PanelAdapter implements Panel{
+public class PanelAdapter implements Panel {
     private Graphics2D graphics2D;
     public PanelAdapter(Graphics2D graphics2D){
         this.graphics2D=graphics2D;

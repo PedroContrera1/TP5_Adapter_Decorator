@@ -1,5 +1,5 @@
-import Entities.Inscripcion;
-import Persistencia.RegistroInscripcion;
+import Ejercicio5.Entities.Inscripcion;
+import Ejercicio5.Persistencia.RegistroInscripcion;
 
 public class RegistroInscripcionBDFake implements RegistroInscripcion {
 

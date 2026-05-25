@@ -1,4 +1,4 @@
-package Exceptions;
+package Ejercicio5.Exceptions;
 
 public class ParticipanteDuplicadoException extends RuntimeException {
     public ParticipanteDuplicadoException(String message) {

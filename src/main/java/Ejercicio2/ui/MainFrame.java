@@ -1,4 +1,4 @@
-package Ejercicio2;
+package Ejercicio2.ui;
 
 import javax.swing.*;
 

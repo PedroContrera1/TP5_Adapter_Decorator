@@ -1,4 +1,7 @@
-package Ejercicio4;
+package Ejercicio4.modelo;
+
+import Ejercicio4.decorator.ComboDecorator;
+
 public class Queso extends ComboDecorator {
 
     private int cantidad;

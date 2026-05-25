@@ -1,5 +1,8 @@
-package Ejercicio2;
+package Ejercicio2.ui;
 
+
+import Ejercicio2.modelo.Panel;
+import Ejercicio2.adapter.PanelAdapter;
 
 import javax.swing.*;
 import java.awt.*;

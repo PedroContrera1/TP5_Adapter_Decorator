@@ -1,4 +1,7 @@
-package Ejercicio1;
+package Ejercicio1.adapter;
+
+import Ejercicio1.model.Motor;
+import Ejercicio1.model.MotorElectrico;
 
 public class MotorElectricoAdapter implements Motor {
 

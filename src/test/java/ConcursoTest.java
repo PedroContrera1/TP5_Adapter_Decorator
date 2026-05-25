@@ -1,7 +1,5 @@
-import Entities.Concurso;
-import Entities.Inscripcion;
-import Entities.Participante;
-import Exceptions.InscripcionFueraDeRangoException;
+import Ejercicio5.Entities.*;
+import Ejercicio5.Exceptions.InscripcionFueraDeRangoException;
 import org.junit.jupiter.api.Test;
 
 import java.time.LocalDate;
@@ -14,7 +12,8 @@ public class ConcursoTest {
     @Test
     void unParticipanteSeInscribeEnUnConcurso() {
         LocalDate inicio = LocalDate.of(2026, 3, 23);
-        Concurso concurso = new Concurso("CON-1", inicio, inicio.plusDays(7), registroFake,notificadorFake);
+        ConcursoInterface concursoBase = new Concurso("CON-2", inicio, inicio.plusDays(7), registroFake);
+        ConcursoInterface concurso = new ConcursoConEmailDecorator(concursoBase, notificadorFake);
         Participante participante = new Participante("45015481", "Pedro", "pedro@mail.com");
         Inscripcion inscripcion = new Inscripcion(participante, inicio.plusDays(1));
 
@@ -30,7 +29,8 @@ public class ConcursoTest {
     @Test
     void unParticipanteSeInscribeElPrimerDiaYGanaDiezPuntos() {
         LocalDate inicio = LocalDate.of(2026, 3, 23);
-        Concurso concurso = new Concurso("CON-2", inicio, inicio.plusDays(7), registroFake,notificadorFake);
+        ConcursoInterface concursoBase = new Concurso("CON-2", inicio, inicio.plusDays(7), registroFake);
+        ConcursoInterface concurso = new ConcursoConEmailDecorator(concursoBase, notificadorFake);
         Participante participante = new Participante("42023456", "Diego","diego@gmail.com");
         Inscripcion inscripcion = new Inscripcion(participante, inicio);
 
@@ -47,7 +47,8 @@ public class ConcursoTest {
     @Test
     void unParticipanteIntentaInscribirseFueraDelRangoDeInscripcion() {
         LocalDate inicio = LocalDate.of(2026, 3, 23);
-        Concurso concurso = new Concurso("CON-3", inicio, inicio.plusDays(7), registroFake, notificadorFake);
+        ConcursoInterface concursoBase = new Concurso("CON-2", inicio, inicio.plusDays(7), registroFake);
+        ConcursoInterface concurso = new ConcursoConEmailDecorator(concursoBase, notificadorFake);
         Participante participante = new Participante("436789023", "Matias", "matias@gmail.com");
         Inscripcion inscripcion = new Inscripcion(participante, inicio.minusDays(1));
 

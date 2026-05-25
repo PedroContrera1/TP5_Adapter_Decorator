@@ -1,6 +1,6 @@
-package Ejercicio2;
+package Ejercicio2.ui;
 
-import java.awt.*;
+import Ejercicio2.modelo.Panel;
 
 class Circulo implements Figura {
     private int radio;
@@ -13,9 +13,9 @@ class Circulo implements Figura {
 
     @Override
     public void dibujar(Panel panel) {
-        panel.dibujarCirculo(coordenada.x() - radio,
-                coordenada.y() - radio,
-                radio * 2,
-                radio * 2);
+        panel.dibujarCirculo(this.coordenada.x() - this.radio,
+                this.coordenada.y() - this.radio,
+                this.radio * 2,
+                this.radio * 2);
     }
 }

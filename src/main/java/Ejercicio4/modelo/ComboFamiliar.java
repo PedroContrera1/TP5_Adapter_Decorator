@@ -1,4 +1,4 @@
-package Ejercicio4;
+package Ejercicio4.modelo;
 
 public class ComboFamiliar implements Combo{
     private double precio;
